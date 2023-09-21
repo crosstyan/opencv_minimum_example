@@ -17,7 +17,7 @@ When I say "install" I also mean "add to your `PATH` environment variable".
 - Install [CMake](https://cmake.org/download/) by Installer.
 - Install [LLVM](https://github.com/llvm/llvm-project/releases). Find Windows
 installer called `LLVM-<version>.win64.exe`. (like [`LLVM-17.0.1-win64.exe`](https://github.com/llvm/llvm-project/releases/download/llvmorg-17.0.1/LLVM-17.0.1-win64.exe))
-I assume you install it to `C:\Program Files\LLVM` so clang should be `C:\Program Files\LLVM\bin\clang.exe`.
+I assume you install it to `C:\Program Files\LLVM` so `clang` should be `C:\Program Files\LLVM\bin\clang.exe`.
 - Install [openCV binary from release](https://opencv.org/releases/). (like [`opencv-4.8.0-windows.exe`](https://github.com/opencv/opencv/releases/download/4.8.0/opencv-4.8.0-windows.exe)). See [OpenCV Windows Installation](#opencv-windows-installation).
 
 You DO NOT NEED to install [Visual Studio](https://visualstudio.microsoft.com/downloads/) (?) since we are using LLVM and Windows SDK is not really needed. (Not sure, if problems occur, try to install it.)
