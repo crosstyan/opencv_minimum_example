@@ -8,7 +8,8 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS on)
 
 # https://packages.msys2.org/package/mingw-w64-x86_64-opencv
 # pacman -S mingw-w64-x86_64-opencv
-# in MSYS2 MinGW x64
+# in `MSYS2 MinGW x64` if you want
+
 if(DEFINED OpenCV_DIR)
     message("OpenCV_DIR: ${OpenCV_DIR}")
     find_package(OpenCV REQUIRED PATHS ${OpenCV_DIR})
