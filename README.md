@@ -1,14 +1,12 @@
 # Simple OpenCV demo
 
-## Build
-
 Don't forget to clone the submodules
 
 ```bash
 git submodule update --init --recursive
 ```
 
-### Build in Windows
+## Windows Build
 
 When I say "install" I also mean "add to your `PATH` environment variable".
 
@@ -30,7 +28,7 @@ or
 [`mingw-w64-ucrt-x86_64-opencv`](https://packages.msys2.org/package/mingw-w64-ucrt-x86_64-opencv)
 in MSYS2 in a MinGW environment. I guess you have to use `gcc` instead of `clang` to build it.
 
-#### OpenCV Windows Installation
+### OpenCV Windows Installation
 
 Run the executable and extract the files to a folder. I prefer `C:\opt\opencv`. 
 
@@ -55,7 +53,7 @@ See also
 - [libc++ 与 libstdc++ 是什么关系？](https://www.zhihu.com/question/343205052)
 - [C/C++标准库](https://zhuanlan.zhihu.com/p/566419668)
 
-#### Build walkthrough
+### Build walkthrough
 
 ```powershell
 mkdir build
@@ -64,29 +62,29 @@ cmake -DOpenCV_DIR=C:/opt/opencv/build/x64/vc16/lib -DCMAKE_CXX_COMPILER="C:/Pro
 ninja -j (Invoke-Expression [Environment]::ProcessorCount)
 ```
 
-#### Visual Studio Code
+### Visual Studio Code
 
 See [`.vsode/settings.windows.jsonc`](./.vscode/settings.windows.jsonc). Change it to `.vscode/settings.json` to be your workspace configuration.
 
-### Build in Linux
+## Linux Build
 
-#### Install dependencies
+### Install dependencies
 
-##### Ubuntu/Debian
+#### Ubuntu/Debian
 
 ```bash
 sudo apt install build-essential cmake ninja-build
 sudo apt install libopencv-dev
 ```
 
-##### Arch Linux
+#### Arch Linux
 
 ```bash
 pacman -S base-devel cmake ninja
 pacman -S opencv
 ```
 
-##### Build
+### Build
 
 This is a typical out-of-source build. Trivially, you can run the following commands:
 
