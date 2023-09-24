@@ -13,20 +13,22 @@ When I say "install" I also mean "add to your `PATH` environment variable".
 - Install [Ninja](https://ninja-build.org/). Extract the zip file and add the
   folder to your `PATH` environment variable.
 - Install [CMake](https://cmake.org/download/) by Installer.
+- Install [Visual Studio Build Tools](https://visualstudio.microsoft.com/downloads/?q=build+tools) and select and install *Desktop development
+with C++* in the installer.
 - Install [LLVM](https://github.com/llvm/llvm-project/releases). Find Windows
 installer called `LLVM-<version>.win64.exe`. (like [`LLVM-17.0.1-win64.exe`](https://github.com/llvm/llvm-project/releases/download/llvmorg-17.0.1/LLVM-17.0.1-win64.exe))
 I assume you install it to `C:\Program Files\LLVM` so `clang` should be `C:\Program Files\LLVM\bin\clang.exe`.
 - Install [openCV binary from release](https://opencv.org/releases/). (like [`opencv-4.8.0-windows.exe`](https://github.com/opencv/opencv/releases/download/4.8.0/opencv-4.8.0-windows.exe)). See [OpenCV Windows Installation](#opencv-windows-installation).
 
-You DO NOT NEED to install [Visual Studio](https://visualstudio.microsoft.com/downloads/) (?) since we are using LLVM and Windows SDK is not really needed. (Not sure, if problems occur, try to install it.)
-
 You DO NOT NEED [MSYS2](https://www.msys2.org/) since no [MingGW](https://www.mingw-w64.org/) should be used. 
+
+If you see `clang: warning: unable to find a Visual Studio installation; try running Clang from a developer command prompt [-Wmsvc-not-found]` when compiling then you should check if Visual Studio Build Tools have been installed correctly.
 
 You could still try
 [`mingw-w64-x86_64-opencv`](https://packages.msys2.org/package/mingw-w64-x86_64-opencv)
 or
 [`mingw-w64-ucrt-x86_64-opencv`](https://packages.msys2.org/package/mingw-w64-ucrt-x86_64-opencv)
-in MSYS2 in a MinGW environment. I guess you have to use `gcc` instead of `clang` to build it.
+in MSYS2 in a MinGW environment if you're targeting MinGW but they are not binary compatible with MSVC.
 
 ### OpenCV Windows Installation
 
