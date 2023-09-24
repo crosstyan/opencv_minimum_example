@@ -1,5 +1,7 @@
 # Simple OpenCV demo
 
+Building it in Linux and macOS is trivial thanks to package manager. However, building it in Windows is a little bit tricky.
+
 Don't forget to clone the submodules
 
 ```bash
